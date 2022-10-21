@@ -10,7 +10,7 @@
 <body>
 
     <div id="demo">
-        <button v-on:click = "">Click</button>
+        <button v-on:click = "asquare">Click</button>
     </div>
 
 <script>
@@ -18,6 +18,11 @@
     var vm = new Vue({
         el: "#demo",
         data: { a: 5 }
+        methods: {
+            asquare: function(event) {
+                alert(this.a *= this.a);
+            }
+        }
     })
     
 </script>

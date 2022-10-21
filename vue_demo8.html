@@ -12,7 +12,7 @@
       <button v-on:click = "showdata" v-bind:style = "styleobj">Click</button>
       <span style = "font-size:25px;"><b> Main heading showing: {{show}}</b></span>
       <h1 v-if = "show">This is a main heading</h1>
-      <h2>This is a sub heading</h2>
+      <h2 v-else>This is a sub heading</h2>
    </div>
    
    <script>

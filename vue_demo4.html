@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VUE Demo</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+        
+        <style>
+         .info {
+          color: #00529B;
+          background-color: #BDE5F8;
+          }
+          div {
+             margin: 10px 0;
+             padding: 12px;
+             font-size : 25px;
+          }
+          .active {
+             color: #4F8A10;
+             background-color: #DFF2BF;
+          }
+          .displayError{
+             color: #D8000C;
+             background-color: #FFBABA;
+          }
+         </style>
+    </head>
+<body>
+
+   <div id = "classbinding">
+      
+   </div>
+   
+   <script type = "text/javascript">
+      var vm = new Vue({
+         el: '#classbinding',
+         data: {
+            title : "This is class binding example",
+            infoclass : 'info',
+            errorclass : 'displayError',
+            isActive : false,
+            haserror : true
+         },
+         components:{
+            'new_component' : {
+               template : '<div class = "info">Class Binding for component</div>'
+            }
+         }
+      });
+   </script>
+    
+</body>
+</html>
